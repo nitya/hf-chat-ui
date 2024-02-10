@@ -1,5 +1,6 @@
 /// <reference types="@sveltejs/kit" />
 /// <reference types="unplugin-icons/types/svelte" />
+/// <reference types="svelte-adapter-azure-swa" />
 
 import type { User } from "$lib/types/User";
 
