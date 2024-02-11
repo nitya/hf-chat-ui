@@ -77,5 +77,8 @@
 	"optionalDependencies": {
 		"aws4fetch": "^1.0.17",
 		"openai": "^4.14.2"
+	},
+	"engines": {
+		"node": ">=18.0.0"
 	}
 }
