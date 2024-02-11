@@ -6,9 +6,6 @@ import dotenv from "dotenv";
 dotenv.config({ path: "./.env.local" });
 dotenv.config({ path: "./.env" });
 
-// NN: Added to fix CI error
-dotenv.config({ path: "./.env.ci" });
-
 process.env.PUBLIC_VERSION = process.env.npm_package_version;
 
 /** @type {import('@sveltejs/kit').Config} */
