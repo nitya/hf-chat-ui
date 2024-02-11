@@ -10,6 +10,8 @@ on:
       - feat/codespaces-azure
 
 jobs:
+  env:
+    MONGODB_URL: ${{ secrets.MONGODB_URL }}
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
@@ -32,8 +34,6 @@ jobs:
           api_location: "node_modules/svelte-adapter-azure-swa/files/api" # Api source code path - optional
           output_location: "build/static" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-        env:
-          MONGODB_URL: ${{ secrets.MONGODB_URL }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
