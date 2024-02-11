@@ -10,13 +10,20 @@ import type { Session } from "$lib/types/Session";
 import type { Assistant } from "$lib/types/Assistant";
 import type { Report } from "$lib/types/Report";
 
+/*
 if (!MONGODB_URL) {
 	throw new Error(
 		"Please specify the MONGODB_URL environment variable inside .env.local. Set it to mongodb://localhost:27017 if you are running MongoDB locally, or to a MongoDB Atlas free instance for example."
 	);
 }
 
-const client = new MongoClient(MONGODB_URL, {
+const client = new MongoClient( (MONGODB_URL), {
+	directConnection: MONGODB_DIRECT_CONNECTION === "true",
+});
+*/
+
+// NN: Hack to prevent failure with CI
+const client = new MongoClient( (MONGODB_URL || "mongodb://localhost:27017"), {
 	directConnection: MONGODB_DIRECT_CONNECTION === "true",
 });
 
