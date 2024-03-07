@@ -42,7 +42,6 @@
   MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
   ```
 
-
 ## 4 | Run Hugging Chat Locally To Test
 
 1. Follow the [Launch](../README.md#launch) instructions in this repo README
@@ -50,6 +49,15 @@
   npm install
   npm run dev
   ```
-1. Succcessful startup should result in a notification like this:
+1. On startup you should see a notification like this:
     ![Changed](./img/get-running-notification.png)
+1. Open the browser to the URL to see this:
+    ![Changed](./img/hugging-chat-start.png)
+1. Click "start chatting" to get Hugging Chat UI
+    ![Changed](./img/hugging-chat-ui.png)
+1. Ask a question to see default chat model in action
+    ![Changed](./img/hugging-chat-ux.png)
+1. Now visit the CosmosDB database to verify data is stored
+    ![Changed](./img/hugging-chat-data.png)
 
+## 5 | Explore Using A Different OpenAI EP
